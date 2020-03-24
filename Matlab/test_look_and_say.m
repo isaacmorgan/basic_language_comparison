@@ -24,11 +24,11 @@ function test_look_and_say(num)
                 if (current_sequence(j) == current_sequence(j-1))
                     count = count + 1;
                 else
-                    temp_series = strcat(temp_series, num2str(count), current_sequence(j-1));
+                    temp_series = [temp_series, num2str(count), current_sequence(j-1)];
                     count = 1;
                 end
             end
-            temp_series = strcat(temp_series, num2str(count),  current_sequence(length(current_sequence)));
+            temp_series = [temp_series, num2str(count),  current_sequence(length(current_sequence))];
             current_sequence = temp_series;
         end 
         i = i + 1;
